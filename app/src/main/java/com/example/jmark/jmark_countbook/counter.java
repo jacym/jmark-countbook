@@ -13,7 +13,15 @@ public abstract class counter implements counterable{
     private String initial;
     private String comment;
 
-    public counter(String name, Date date, String current, String initial, String comment){
+    public counter(String name, String current, String initial, String comment){
+        date = new Date();
+        this.name = name;
+        this.current = current;
+        this.initial = initial;
+        this.comment = comment;
+    }
+
+    public counter(String name, String current, String initial, String comment,Date date){
         this.date = date;
         this.name = name;
         this.current = current;
@@ -25,10 +33,27 @@ public abstract class counter implements counterable{
     public String getInitial() {return initial;}
     public String getComment() {return comment;}
 
-    public void setCount(String current, String initial) throws counterNonNumeric{
-        if
+    public void setCurrentCount(String current) throws counterNonNumeric{
+        if (current == null || current.matches("[-+]?\\d*\\.?\\d+")){
+            throw new counterNonNumeric();
+        }
+        else{
+            this.current = current;
+        }
     }
+    public void setInitialCount(String initial) throws counterNonNumeric{
+        if (initial == null || initial.matches("[-+]?\\d*\\.?\\d+")){
+            throw new counterNonNumeric();
+        }
+        else{
+            this.initial = initial;
+        }
+    }
+
     public Date getDate() {return date;}
 
-
+    @Override
+    public String toString(){
+        return name + " | " + date.toString() + " | " + current;
+    }
 }

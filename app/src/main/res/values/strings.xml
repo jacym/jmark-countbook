@@ -4,5 +4,5 @@
     <string name="current">Current Value</string>
     <string name="initial">Initial Value of Counter</string>
     <string name="comment">Comments</string>
-    <string name="submit">Submit</string>
+    <string name="submit">Create Counter</string>
 </resources>
