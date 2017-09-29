@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">jmark-Countbook</string>
+    <string name="name">Name of Counter</string>
+    <string name="current">Current Value</string>
+    <string name="initial">Initial Value of Counter</string>
+    <string name="comment">Comments</string>
+    <string name="submit">Submit</string>
+</resources>
