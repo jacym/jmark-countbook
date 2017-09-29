@@ -21,4 +21,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, createCounter.class);
         startActivity(intent);
     }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        loadFromFile();
+        adaptar= new ArrayAdaptar<counter>(this,R.layout.list_item, counters);
+        countersList.setAdapter(adaptar);
+    }
 }
