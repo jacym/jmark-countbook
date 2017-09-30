@@ -13,7 +13,7 @@ public abstract class counter implements counterable{
     private String initial;
     private String comment;
 
-    public counter(String name, String current, String initial, String comment){
+    public counter(String name, String initial, String current, String comment){
         date = new Date();
         this.name = name;
         this.current = current;
@@ -21,7 +21,7 @@ public abstract class counter implements counterable{
         this.comment = comment;
     }
 
-    public counter(String name, String current, String initial, String comment,Date date){
+    public counter(String name, String initial, String current, String comment,Date date){
         this.date = date;
         this.name = name;
         this.current = current;

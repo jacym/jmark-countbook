@@ -8,10 +8,10 @@ import java.util.Date;
 
 public class NormalCounter extends counter{
 
-    public NormalCounter(String name, String current, String initial, String comment){super(name,current,initial,comment);}
+    public NormalCounter(String name, String initial, String current, String comment){super(name,initial,current,comment);}
 
 
-    public NormalCounter(String name, String current, String initial, String comment, Date date){
-        super(name,current,initial,comment,date);
+    public NormalCounter(String name, String initial, String current, String comment, Date date){
+        super(name,initial,current,comment,date);
     }
 }

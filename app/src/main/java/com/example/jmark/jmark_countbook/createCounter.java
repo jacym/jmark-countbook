@@ -20,8 +20,8 @@ import java.util.ArrayList;
 public class createCounter extends AppCompatActivity {
 
     private static final String FILENAME = "file.sav";
-    public ArrayList<counter> counters = new ArrayList<counter>();
-    private ArrayAdapter<counter> adaptar;
+    private ArrayList<counter> counters = new ArrayList<counter>();
+    private ArrayAdapter<counter> adapter;
 
     private EditText counterName;
     private EditText current;
@@ -30,7 +30,7 @@ public class createCounter extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_counter);
 
@@ -43,7 +43,7 @@ public class createCounter extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 setResult(RESULT_OK);
                 String name = counterName.getText().toString();
                 String init = initial.getText().toString();
@@ -51,7 +51,7 @@ public class createCounter extends AppCompatActivity {
                 String commentlines = comments.getText().toString();
 
                 counters.add(new NormalCounter(name,init,curr,commentlines));
-                adaptar.notifyDataSetChanged();
+                adapter.notifyDataSetChanged();
                 saveInFile();
 
 
