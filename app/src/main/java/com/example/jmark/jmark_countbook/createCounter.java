@@ -32,8 +32,8 @@ public class createCounter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_counter);
 
-        current = (EditText) findViewById(R.id.currentVal);
         initial = (EditText) findViewById(R.id.initialVal);
+        current = initial;
         comments = (EditText) findViewById(R.id.comment);
         counterName = (EditText) findViewById(R.id.name);
         Button submitButton = (Button) findViewById(R.id.submit);

@@ -21,8 +21,6 @@ import java.util.HashMap;
 
 public class changeCounter extends AppCompatActivity {
 
-    public ArrayAdapter<counter> adapter;
-
     private static final String FILENAME = "file.sav";
 
     private TextView counterName;
@@ -85,6 +83,19 @@ public class changeCounter extends AppCompatActivity {
                 saveInFile();
             }
 
+        });
+        delete.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                setResult(RESULT_OK);
+
+                int keyLocation = pos;
+                MainActivity.counters.remove(keyLocation);
+                MainActivity.adapter.notifyDataSetChanged();
+                saveInFile();
+
+                finish();
+            }
         });
 
     }
