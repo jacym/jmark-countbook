@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ListView;
@@ -23,15 +25,24 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView countersList;
     private static final String FILENAME = "file.sav";
-    public ArrayList<counter> counters = new ArrayList<counter>();
-    public ArrayAdapter<counter> adaptar;
-
+    public static ArrayList<counter> counters = new ArrayList<counter>();
+    public ArrayAdapter<counter> adapter;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         countersList = (ListView) findViewById(R.id.countersList);
+
+        countersList.setOnClickListener(new OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+                Intent intent = new Intent(MainActivity.this, editCounter.class);
+                startActivity(intent);
+
+            }
+        });
     }
 
     /**Called when user taps the create floating button in lower right*/
@@ -40,12 +51,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     @Override
     protected void onStart(){
         super.onStart();
         loadFromFile();
-        adaptar = new ArrayAdapter<counter>(this, R.layout.list_item, counters);
-        countersList.setAdapter(adaptar);
+        adapter = new ArrayAdapter<counter>(this, R.layout.list_item, counters);
+        countersList.setAdapter(adapter);
     }
 
     private void loadFromFile(){
@@ -55,8 +67,7 @@ public class MainActivity extends AppCompatActivity {
             Gson gson = new Gson();
             Type listType = new TypeToken<ArrayList<NormalCounter>>() {}.getType();
             counters = gson.fromJson(in, listType);
-        } catch (FileNotFoundException e) {
-            counters = new ArrayList<counter>();
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

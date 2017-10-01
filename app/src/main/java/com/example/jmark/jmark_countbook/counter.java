@@ -1,5 +1,7 @@
 package com.example.jmark.jmark_countbook;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -54,6 +56,6 @@ public abstract class counter implements counterable{
 
     @Override
     public String toString(){
-        return name + " | " + date.toString() + " | " + current;
+        return name + "\n" + date.toString() + "\n" + current + "\n" + initial + "\n" + comment;
     }
 }

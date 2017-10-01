@@ -20,7 +20,6 @@ import java.util.ArrayList;
 public class createCounter extends AppCompatActivity {
 
     private static final String FILENAME = "file.sav";
-    private ArrayList<counter> counters = new ArrayList<counter>();
     private ArrayAdapter<counter> adapter;
 
     private EditText counterName;
@@ -50,8 +49,8 @@ public class createCounter extends AppCompatActivity {
                 String curr = current.getText().toString();
                 String commentlines = comments.getText().toString();
 
-                counters.add(new NormalCounter(name,init,curr,commentlines));
-                adapter.notifyDataSetChanged();
+                MainActivity.counters.add(new NormalCounter(name,init,curr,commentlines));
+/*                adapter.notifyDataSetChanged();*/
                 saveInFile();
 
 
@@ -67,13 +66,11 @@ public class createCounter extends AppCompatActivity {
                     Context.MODE_PRIVATE);
             OutputStreamWriter writer = new OutputStreamWriter(fos);
             Gson gson = new Gson();
-            gson.toJson(counters,writer);
+            gson.toJson(MainActivity.counters,writer);
             writer.flush();
 
             fos.close();
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException();
+
         } catch (IOException e) {
             // TODO Auto-generated catch block
             throw new RuntimeException();
