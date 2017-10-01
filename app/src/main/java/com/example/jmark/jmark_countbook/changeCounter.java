@@ -1,18 +1,29 @@
 package com.example.jmark.jmark_countbook;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+
 import org.w3c.dom.Text;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.HashMap;
 
 public class changeCounter extends AppCompatActivity {
+
+    public ArrayAdapter<counter> adapter;
+
+    private static final String FILENAME = "file.sav";
 
     private TextView counterName;
     private TextView current;
@@ -24,7 +35,7 @@ public class changeCounter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_counter);
 
-        TextView current = (TextView) findViewById(R.id.currentV);
+        final TextView current = (TextView) findViewById(R.id.currentV);
         TextView initial = (TextView) findViewById(R.id.initial);
         TextView comments = (TextView) findViewById(R.id.comment);
         TextView counterName = (TextView) findViewById(R.id.name);
@@ -33,15 +44,65 @@ public class changeCounter extends AppCompatActivity {
         Button decrement = (Button) findViewById(R.id.decrement);
         Button edit = (Button) findViewById(R.id.edit);
 
-        String name = getIntent().getExtras().getString("Name");
+        final String name = getIntent().getExtras().getString("Name");
         String currentV = getIntent().getExtras().getString("Current");
-        String initialV = getIntent().getExtras().getString("Initial");
-        String comment = getIntent().getExtras().getString("Comment");
+        final String initialV = getIntent().getExtras().getString("Initial");
+        final String comment = getIntent().getExtras().getString("Comment");
+        final Integer pos = getIntent().getExtras().getInt("pos");
         counterName.setText(name);
         current.setText(currentV);
         initial.setText(initialV);
         comments.setText(comment);
 
+        increment.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_OK);
+
+                Integer incrementVal = Integer.parseInt(MainActivity.counters.get(pos).getCurrent());
+                incrementVal=incrementVal + 1;
+                String incrementCurr = String.valueOf(incrementVal);
+                MainActivity.counters.set(pos, new NormalCounter(name,initialV,incrementCurr,comment));
+                current.setText(incrementCurr);
+
+                saveInFile();
+            }
+
+        });
+        decrement.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_OK);
+
+                Integer decrementVal = Integer.parseInt(MainActivity.counters.get(pos).getCurrent());
+                decrementVal = decrementVal - 1;
+                String decrementCurr = String.valueOf(decrementVal);
+                MainActivity.counters.set(pos, new NormalCounter(name,initialV,decrementCurr,comment));
+                current.setText(decrementCurr);
+
+                saveInFile();
+            }
+
+        });
+
+    }
+    private void saveInFile() {
+        try {
+            FileOutputStream fos = openFileOutput(FILENAME,
+                    Context.MODE_PRIVATE);
+            OutputStreamWriter writer = new OutputStreamWriter(fos);
+            Gson gson = new Gson();
+            gson.toJson(MainActivity.counters,writer);
+            writer.flush();
+
+            fos.close();
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException();
+        }
     }
 
 }

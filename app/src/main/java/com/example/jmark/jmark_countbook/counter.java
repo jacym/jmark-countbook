@@ -58,4 +58,6 @@ public abstract class counter implements counterable{
     public String toString(){
         return name + "\n" + date.toString() + "\nCurrent Count: " + current + "\nInitial Count: " + initial + "\nComments: " + comment;
     }
+
+
 }

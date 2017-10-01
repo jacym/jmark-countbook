@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView countersList;
     private static final String FILENAME = "file.sav";
     public static ArrayList<counter> counters = new ArrayList<counter>();
-    public ArrayAdapter<counter> adapter;
+    public static ArrayAdapter<counter> adapter;
     
 
     @Override
@@ -42,11 +42,13 @@ public class MainActivity extends AppCompatActivity {
                 String counterCurrent = counters.get(position).getCurrent();
                 String counterInitial = counters.get(position).getInitial();
                 String counterComment = counters.get(position).getComment();
+                Integer pos = position;
                 Intent intent = new Intent(MainActivity.this, changeCounter.class);
                 intent.putExtra("Name", counterName);
                 intent.putExtra("Current", counterCurrent);
                 intent.putExtra("Initial", counterInitial);
                 intent.putExtra("Comment", counterComment);
+                intent.putExtra("pos",pos);
                 startActivity(intent);
 
             }
