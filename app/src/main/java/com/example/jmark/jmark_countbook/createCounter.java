@@ -20,7 +20,6 @@ import java.util.ArrayList;
 public class createCounter extends AppCompatActivity {
 
     private static final String FILENAME = "file.sav";
-    private ArrayAdapter<counter> adapter;
 
     private EditText counterName;
     private EditText current;
@@ -50,7 +49,6 @@ public class createCounter extends AppCompatActivity {
                 String commentlines = comments.getText().toString();
 
                 MainActivity.counters.add(new NormalCounter(name,init,curr,commentlines));
-/*                adapter.notifyDataSetChanged();*/
                 saveInFile();
 
 
