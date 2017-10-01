@@ -35,7 +35,9 @@
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/decrement" />
+        app:layout_constraintBottom_toTopOf="@+id/decrement"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <Button
         android:id="@+id/increment"
@@ -57,7 +59,9 @@
         android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toTopOf="@+id/initial"
         android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/initial"
@@ -71,7 +75,9 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         android:layout_marginBottom="23dp"
-        app:layout_constraintBottom_toTopOf="@+id/comment" />
+        app:layout_constraintBottom_toTopOf="@+id/comment"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/comment"
@@ -86,27 +92,22 @@
         app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/edit" />
-
-    <Button
-        android:id="@+id/edit"
-        android:layout_width="130dp"
-        android:layout_height="72dp"
-        android:text="Edit"
-        app:layout_constraintBaseline_toBaselineOf="@+id/delete"
-        android:layout_marginRight="32dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/delete" />
 
     <Button
         android:id="@+id/delete"
-        android:layout_width="130dp"
-        android:layout_height="72dp"
-        android:layout_marginBottom="9dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
         android:text="delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/edit" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp" />
+
 </android.support.constraint.ConstraintLayout>

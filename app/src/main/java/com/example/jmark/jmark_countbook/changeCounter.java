@@ -23,11 +23,6 @@ public class changeCounter extends AppCompatActivity {
 
     private static final String FILENAME = "file.sav";
 
-    private TextView counterName;
-    private TextView current;
-    private TextView initial;
-    private TextView comments;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,17 +35,16 @@ public class changeCounter extends AppCompatActivity {
         Button delete = (Button) findViewById(R.id.delete);
         Button increment = (Button) findViewById(R.id.increment);
         Button decrement = (Button) findViewById(R.id.decrement);
-        Button edit = (Button) findViewById(R.id.edit);
 
-        final String name = getIntent().getExtras().getString("Name");
-        String currentV = getIntent().getExtras().getString("Current");
-        final String initialV = getIntent().getExtras().getString("Initial");
-        final String comment = getIntent().getExtras().getString("Comment");
         final Integer pos = getIntent().getExtras().getInt("pos");
+        final String name = MainActivity.counters.get(pos).getName();
+        String currentV = MainActivity.counters.get(pos).getCurrent();
+        final String initialV = MainActivity.counters.get(pos).getInitial();
+        final String comment = MainActivity.counters.get(pos).getComment();
         counterName.setText(name);
         current.setText(currentV);
-        initial.setText(initialV);
-        comments.setText(comment);
+        initial.setText("Initial Value: "+ initialV);
+        comments.setText("Comments: "+ comment);
 
         increment.setOnClickListener(new View.OnClickListener() {
 

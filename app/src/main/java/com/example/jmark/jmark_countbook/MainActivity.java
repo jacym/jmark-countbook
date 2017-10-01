@@ -35,19 +35,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         countersList = (ListView) findViewById(R.id.countersList);
 
+        countersList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Integer pos = position;
+                Intent intent = new Intent(MainActivity.this, editCounter.class);
+                intent.putExtra("pos",pos);
+                startActivity(intent);
+                return false;
+            }
+        });
+
         countersList.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-                String counterName = counters.get(position).getName();
-                String counterCurrent = counters.get(position).getCurrent();
-                String counterInitial = counters.get(position).getInitial();
-                String counterComment = counters.get(position).getComment();
                 Integer pos = position;
                 Intent intent = new Intent(MainActivity.this, changeCounter.class);
-                intent.putExtra("Name", counterName);
-                intent.putExtra("Current", counterCurrent);
-                intent.putExtra("Initial", counterInitial);
-                intent.putExtra("Comment", counterComment);
                 intent.putExtra("pos",pos);
                 startActivity(intent);
 
