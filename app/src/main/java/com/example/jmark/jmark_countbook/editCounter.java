@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -59,11 +60,20 @@ public class editCounter extends AppCompatActivity {
                 String curr = currentNew.getText().toString();
                 String commentlines = commentNew.getText().toString();
 
-                MainActivity.counters.set(pos, new NormalCounter(name,init,curr,commentlines));
+                if (name.equals("") || init.equals("") || curr.equals("")){
+                    Context context = getApplicationContext();
+                    CharSequence text = "Name, Initial Value, or Curret Value cannot be empty";
+                    int duration = Toast.LENGTH_SHORT;
 
-                saveInFile();
+                    Toast.makeText(context,text,duration).show();
+                }
+                else{
+                    MainActivity.counters.set(pos, new NormalCounter(name,init,curr,commentlines));
+                    saveInFile();
 
-                finish();
+
+                    finish();
+                }
             }
 
         });

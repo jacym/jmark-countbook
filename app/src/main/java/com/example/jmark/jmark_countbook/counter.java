@@ -54,9 +54,10 @@ public abstract class counter implements counterable{
 
     public Date getDate() {return date;}
 
+
     @Override
     public String toString(){
-        return name + "\n" + date.toString() + "\nCurrent Count: " + current + "\nInitial Count: " + initial + "\nComments: " + comment;
+        return name + "\nDate: " +  new SimpleDateFormat("yyyy-MM-dd").format(date).toString() + "\nCurrent Count: " + current + "\nInitial Count: " + initial + "\nComments: " + comment;
     }
 
 

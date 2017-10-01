@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -48,11 +49,20 @@ public class createCounter extends AppCompatActivity {
                 String curr = current.getText().toString();
                 String commentlines = comments.getText().toString();
 
-                MainActivity.counters.add(new NormalCounter(name,init,curr,commentlines));
-                saveInFile();
+                if (name.equals("")||init.equals("")){
+                    Context context = getApplicationContext();
+                    CharSequence text = "Name and initial value required!";
+                    int duration = Toast.LENGTH_SHORT;
+
+                    Toast.makeText(context,text,duration).show();
+                }
+                else{
+                    MainActivity.counters.add(new NormalCounter(name,init,curr,commentlines));
+                    saveInFile();
 
 
-                finish();
+                    finish();
+                }
             }
 
         });

@@ -23,9 +23,23 @@
 
     <ListView
         android:id="@+id/countersList"
-        android:layout_width="456dp"
-        android:layout_height="634dp"
-        tools:layout_editor_absoluteX="-36dp"
-        tools:layout_editor_absoluteY="-17dp" />
+        android:layout_width="402dp"
+        android:layout_height="582dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.555" />
+
+    <TextView
+        android:id="@+id/counterNumber"
+        android:layout_width="412dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="-1dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/countersList"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

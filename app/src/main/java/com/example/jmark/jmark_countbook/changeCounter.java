@@ -35,10 +35,11 @@ public class changeCounter extends AppCompatActivity {
         Button delete = (Button) findViewById(R.id.delete);
         Button increment = (Button) findViewById(R.id.increment);
         Button decrement = (Button) findViewById(R.id.decrement);
+        Button reset = (Button) findViewById(R.id.reset);
 
         final Integer pos = getIntent().getExtras().getInt("pos");
         final String name = MainActivity.counters.get(pos).getName();
-        String currentV = MainActivity.counters.get(pos).getCurrent();
+        final String currentV = MainActivity.counters.get(pos).getCurrent();
         final String initialV = MainActivity.counters.get(pos).getInitial();
         final String comment = MainActivity.counters.get(pos).getComment();
         counterName.setText(name);
@@ -77,6 +78,18 @@ public class changeCounter extends AppCompatActivity {
                 saveInFile();
             }
 
+        });
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setResult(RESULT_OK);
+
+                String currentV=initialV;
+                MainActivity.counters.set(pos, new NormalCounter(name,initialV,currentV,comment));
+                current.setText(currentV);
+
+                saveInFile();
+            }
         });
         delete.setOnClickListener(new View.OnClickListener(){
             @Override
