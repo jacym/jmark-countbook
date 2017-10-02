@@ -1,3 +1,16 @@
+
+/*
+ *  Edit counter
+ *
+ *  Version 1.0
+ *
+ *  October 1, 2017
+ *
+ *  Copyright © 2017 Jacy Mark, CMPUT301, University of Alberta - All Rights Reserved.
+ *  You may use, distribute, or modify this code under terms and conditions of the Code of Student Behavior at University of Alberta.
+ *  You can find a copy of the license in this project. Otherwise please contact contact@abc.ca
+ */
+
 package com.example.jmark.jmark_countbook;
 
 import android.content.Context;
@@ -35,6 +48,7 @@ public class editCounter extends AppCompatActivity {
         EditText counterName = (EditText) findViewById(name);
         Button change= (Button) findViewById(R.id.submit);
 
+        /*get all the values from xml view as well as from arraylist from main*/
         final Integer pos = getIntent().getExtras().getInt("pos");
         final String name = MainActivity.counters.get(pos).getName();
         String currentV = MainActivity.counters.get(pos).getCurrent();
@@ -50,6 +64,7 @@ public class editCounter extends AppCompatActivity {
         commentNew = (EditText) findViewById(R.id.comment);
         nameNew = (EditText) findViewById(R.id.name);
 
+        /*gets new values from edit text fields and sets the data in arraylist at pos to the new values*/
         change.setOnClickListener(new View.OnClickListener() {
 
             @Override

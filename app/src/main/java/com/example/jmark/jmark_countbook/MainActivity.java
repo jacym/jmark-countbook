@@ -1,3 +1,16 @@
+
+/*
+ *  Main Activity for countbook
+ *
+ *  Version 1.0
+ *
+ *  September 25, 2017
+ *
+ *  Copyright © 2017 Jacy Mark, CMPUT301, University of Alberta - All Rights Reserved.
+ *  You may use, distribute, or modify this code under terms and conditions of the Code of Student Behavior at University of Alberta.
+ *  You can find a copy of the license in this project. Otherwise please contact contact@abc.ca
+ */
+
 package com.example.jmark.jmark_countbook;
 
 import android.content.Intent;
@@ -36,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         countersList = (ListView) findViewById(R.id.countersList);
 
+        /*initiate new activity for editing on tap and hold of the counter*/
         countersList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
@@ -47,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /*initiate new activity for changing current and viewing details on tap*/
         countersList.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
@@ -79,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         counterNumberText.setText("Counters: " + numberOfCounters.toString());
     }
 
+    /*loads from file (for saving*/
     private void loadFromFile(){
         try{
             FileInputStream fis = openFileInput(FILENAME);

@@ -1,3 +1,16 @@
+
+/*
+ *  Change Counter class
+ *
+ *  Version 1.0
+ *
+ *  September 30, 2017
+ *
+ *  Copyright © 2017 Jacy Mark, CMPUT301, University of Alberta - All Rights Reserved.
+ *  You may use, distribute, or modify this code under terms and conditions of the Code of Student Behavior at University of Alberta.
+ *  You can find a copy of the license in this project. Otherwise please contact contact@abc.ca
+ */
+
 package com.example.jmark.jmark_countbook;
 
 import android.content.Context;
@@ -28,6 +41,7 @@ public class changeCounter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_counter);
 
+        /*get all the values from xml view as well as from arraylist from main*/
         final TextView current = (TextView) findViewById(R.id.currentV);
         TextView initial = (TextView) findViewById(R.id.initial);
         TextView comments = (TextView) findViewById(R.id.comment);
@@ -47,6 +61,7 @@ public class changeCounter extends AppCompatActivity {
         initial.setText("Initial Value: "+ initialV);
         comments.setText("Comments: "+ comment);
 
+        /*on button press get integer from arraylist add 1 and set the new value to arraylist*/
         increment.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -63,6 +78,8 @@ public class changeCounter extends AppCompatActivity {
             }
 
         });
+
+        /*on button press get integer from arraylist subtract 1 and set the new value to arraylist*/
         decrement.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -79,6 +96,8 @@ public class changeCounter extends AppCompatActivity {
             }
 
         });
+
+        /* resets current value to initial value by setting current in arraylist to same as initial in arraylist*/
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,6 +110,8 @@ public class changeCounter extends AppCompatActivity {
                 saveInFile();
             }
         });
+
+        /*removes data from arraylist at position passed from main activity*/
         delete.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
