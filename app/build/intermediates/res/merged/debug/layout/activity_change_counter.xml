@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jmark.jmark_countbook.changeCounter">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="430dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/name"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/increment" />
+
+    <TextView
+        android:id="@+id/currentV"
+        android:layout_width="371dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/current"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/decrement"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/increment"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="25dp"
+        android:text="Increment"
+        app:layout_constraintBottom_toTopOf="@+id/currentV"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/decrement"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:text="decrement"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/initial"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/initial"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/comment"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="382dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="@string/comment"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/delete" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="33dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reset"
+        app:layout_constraintBaseline_toBaselineOf="@+id/delete"
+        android:layout_marginRight="32dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

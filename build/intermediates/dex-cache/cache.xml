@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\.android\build-cache\8fd6a016baafd38d4e09a2bc0b52891d1ce91866\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\classes_e2556a54425e044732d2d4a52416b5a92e64efdf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\.android\build-cache\9a9599e0ee74496f08b3005698e6f180a9a0ea0f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\classes_9c9e57798e60db7523196717514468712b8fed5f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\.android\build-cache\8ca9d563a3e6e41ed53d47052375adb0422f1c5f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\classes_d82fcf35f3254a0ebb9ef34b75520f400d535166.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\.android\build-cache\a455edb320779559a06c8b81f51dffe4d1502fdf\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\classes_605dbb6a28fa6b62bfd4fb524434b2427d47f9ad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\support-annotations-26.0.0-alpha1_c1d4bb767f8c69aaff6237825ded19902d46d0f4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\.android\build-cache\f0adea9dcc05f5754695e6e8d2e95766777ade6f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\classes_c7c629d35b65bad9ffcc97475eeb981c861f8139.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_f9b005a59d42bd9058bf8d1d5bb6e8ecdb0bcad3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\.android\build-cache\23dec875fa925bc5e62ec8ac74287a18886e70a4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\classes_ab1f5eddc817533bb7e52ff72458ca0d396f1c48.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.2\3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf\gson-2.8.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\gson-2.8.2_5269ba6286a1d3cdcaa85b43fc4a84f2f7a74436.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\.android\build-cache\d19b634b29dd80ffdf970b28e9ae18be082d33f6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\classes_985e1b6fe6a09e5afc37c2b2729d40642126df1a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\.android\build-cache\df744134e8c27cead920967defecf97f6ec0ec35\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\classes_bf71df9f116a258c0eede8d8b28c62ac3fab6c8e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\.android\build-cache\ae2ceae4affd4652ab35400b6cc7106599885119\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\classes_8079107183707e0778941931bea679eee625957c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\.android\build-cache\ace768691a4b0a4e4102e924407cf04a4c5bd7f7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\classes_4664d96957140c5d5a643f16402a85a9fa98ea22.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\.android\build-cache\bdec1fb6c14eb2c95cea1ea5b9b95ff51a75f414\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\classes_553b256ea4d3914510aa56f808cffb099ffae01d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\.android\build-cache\5d8ac9814a7905ceb66da9ef66aca75931adf12e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\classes_e19afda3d1c7a3c287f05aa800301c852e978f18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmark\.android\build-cache\d2290fbbe736b2a704efdefa9a793f18797370f6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\classes_25d5821bdd4df53de99c98cb413ec4f64abe83d7.jar" />
+    </item>
+
+</items>
