@@ -110,6 +110,24 @@
         <dex dex="C:\Users\jmark\Documents\jmark-Countbook\app\build\intermediates\pre-dexed\debug\classes_8079107183707e0778941931bea679eee625957c.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\jmark\Documents\test\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d3a5fdc032d3dd92b11ebb5f059e9f92a6fafb28">
+        <dex dex="C:\Users\jmark\Documents\test\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_3522f471a6f5386389b96ace3a5216ad1833390d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jmark\Documents\test\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\jmark\Documents\test\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_561ab4f15b50927d73a3791c6fa36bab771148f2\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Users\jmark\.android\build-cache\ace768691a4b0a4e4102e924407cf04a4c5bd7f7\output\jars\classes.jar"
         jumboMode="false"

@@ -1,4 +1,7 @@
-#Mon Oct 02 01:06:22 MDT 2017
-base.0=C\:\\Users\\jmark\\Documents\\jmark-Countbook\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
-renamed.0=classes.dex
-file.0=C\:\\Users\\jmark\\Documents\\jmark-Countbook\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+#Mon Oct 02 01:14:01 MDT 2017
+base.0=C\:\\Users\\jmark\\Documents\\test\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_3522f471a6f5386389b96ace3a5216ad1833390d
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\jmark\\Documents\\test\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_561ab4f15b50927d73a3791c6fa36bab771148f2\\classes.dex
+base.1=C\:\\Users\\jmark\\Documents\\test\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_561ab4f15b50927d73a3791c6fa36bab771148f2
+file.0=C\:\\Users\\jmark\\Documents\\test\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_3522f471a6f5386389b96ace3a5216ad1833390d\\classes.dex
